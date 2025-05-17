@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Your Mood</title>
+</head>
+<body style="background-color: black; color: white; font-family: Arial, sans-serif;">
+    <h1>Log Your Mood</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'home' %}" style="color: lightblue;">Back to Home</a>
+</body>
+</html>
